@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+body {
+  background-color: #0B0E11;
+  color: #E8ECF1;
+}
+
+/* Cyber Indigo theme surface — applied at the html/body level by ThemeProvider */
+[data-theme="cyber-indigo"] body {
+  @apply bg-cyber-gradient text-cyber-text;
+  background-attachment: fixed;
+}
+
+/* Lighter variant of the SAME indigo/violet palette — brighter surfaces,
+   deeper glow, never a flat gray theme */
+[data-theme="cyber-indigo-light"] body {
+  background: radial-gradient(120% 120% at 15% 0%, #241a4d 0%, #171236 45%, #0d0a24 100%);
+  background-attachment: fixed;
+  @apply text-cyber-text;
+}
+
+/* Reusable glowing card surface for the Cyber Indigo dashboard */
+.glow-panel {
+  @apply bg-cyber-panel-gradient backdrop-blur-md border border-cyber-border rounded-2xl shadow-glow-sm;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.glow-panel:hover {
+  @apply border-cyber-borderStrong shadow-glow-md;
+}
+
+/* Horizontal scroll track with no visible scrollbar (index card strip) */
+.scroll-track {
+  scrollbar-width: none;
+}
+.scroll-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Numeric data (prices, %, volume) always renders in mono for tabular alignment */
+.numeric {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}

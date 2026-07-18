@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MarketCap Mobile",
+      "request": "launch",
+      "type": "dart",
+      "toolArgs": [
+        "--dart-define=SUPABASE_URL=https://uqrtlopksiskteiqqpib.supabase.co",
+        "--dart-define=SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVxcnRsb3Brc2lza3RlaXFxcGliIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM5ODY0ODIsImV4cCI6MjA5OTU2MjQ4Mn0.UVpY9qvrFT9qMlexKDIEMjkyQpnriZwBMu9L-dyhmTc"
+      ]
+    }
+  ]
+}
